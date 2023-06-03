@@ -1,0 +1,50 @@
+ // entrada de string USO WHILE
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Você precisa falar" +
+                "as palavras mágicas: ");
+        String frase = entrada.nextLine();
+        while (!frase.equalsIgnoreCase("sair")) {
+            System.out.println("Digite alguma coisa: ");
+            frase = entrada.nextLine();
+        }
+        System.out.println("Saiu do programa");
+        entrada.close();
+        
+        //do WHILE
+          Scanner entrada = new Scanner(System.in);
+        String frase = "";
+        do {
+            System.out.println("Você precisa falar" +
+                    "as palavras mágicas: ");
+                    System.out.println("Quer sair? ");
+            frase = entrada.nextLine();
+        } while (!frase.equalsIgnoreCase("por favor"));
+
+        System.out.println("Saiu do programa");
+        entrada.close();
+        
+        //for e foreach
+        
+          double[] notasAlunoA = new double[4];
+       //imprimindo nota antes de atribuir valor
+       System.out.println(Arrays.toString(notasAlunoA));
+       
+       notasAlunoA[0] = 7.9;
+       notasAlunoA[1] = 8;
+       notasAlunoA[2] = 6.7;
+       notasAlunoA[3] = 9.7;
+
+       //imprimindo nota depois de atribuir valor
+       System.out.println(Arrays.toString(notasAlunoA));
+
+       double totalAlunoA=0;
+       for(int i=0; i< notasAlunoA.length; i++)
+         {
+              totalAlunoA += notasAlunoA[i];
+         }
+         System.out.println(totalAlunoA/notasAlunoA.length);
+         System.out.println("=====================================");
+
+         for(double nota: notasAlunoA){
+             System.out.println(nota+"  ");
+            }
