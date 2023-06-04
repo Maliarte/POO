@@ -140,3 +140,28 @@ private static Produto criarProduto(int tipo, int quantidade) {
             return null;
     }
 }
+/*
+[<]Na assinatura do método criarProduto, a classe Produto é especificada como o tipo de retorno do método. Isso significa que o método criarProduto deve retornar um objeto do tipo Produto.
+
+Essa escolha é feita porque as subclasses de Produto (como Banana, Maca, etc.) herdam da classe Produto. Portanto, é possível retornar uma instância de qualquer uma dessas subclasses como um objeto do tipo Produto. Isso é útil quando você precisa lidar com diferentes tipos de produtos de forma genérica, sem se preocupar com a implementação específica de cada subclasse.
+
+Dessa forma, o método criarProduto retorna um objeto do tipo Produto para garantir que o retorno seja compatível com a assinatura do método. No entanto, internamente, o método cria uma instância de uma subclasse específica (como Banana, Maca, etc.), dependendo do tipo fornecido como argumento. Isso permite que você trabalhe com polimorfismo, tratando diferentes tipos de produtos de maneira uniforme, por meio da classe Produto comum a todas as subclasses.
+
+Em resumo, a especificação da classe Produto como tipo de retorno do método criarProduto permite a flexibilidade de retornar diferentes subclasses de Produto e tratar todos os produtos de forma genérica.
+
+[>] mas sendo a classe Produto uma classe abstrata, ela não pode instanciar um novo objeto?
+
+[<] Você está correto, uma classe abstrata não pode ser instanciada diretamente. No caso da classe abstrata Produto, não é possível criar diretamente uma instância dela. No entanto, as subclasses concretas de Produto, como Banana, Maca, etc., podem ser instanciadas.
+
+No método criarProduto, quando utilizamos Produto como tipo de retorno, estamos nos referindo ao polimorfismo. O polimorfismo permite que uma variável de um tipo mais genérico (como Produto) seja utilizada para referenciar um objeto de um tipo mais específico (como Banana, Maca, etc.).
+
+Nesse caso, as subclasses concretas de Produto podem ser retornadas como um objeto do tipo Produto. Por exemplo, a linha return new Banana(quantidade); cria uma instância da classe Banana e retorna essa instância como um objeto do tipo Produto. Como Banana é uma subclasse de Produto, essa operação é permitida.
+
+Assim, embora não seja possível criar uma instância direta da classe abstrata Produto, podemos retornar instâncias de suas subclasses concretas como objetos do tipo Produto, aproveitando o polimorfismo.
+
+
+
+
+
+
+*/
