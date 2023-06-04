@@ -1,52 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-/*
-class Cesta {
-    private static final int MAX_PRODUTOS = 12;
-    private List<Produto> produtos;
 
-    public Cesta() {
-        produtos = new ArrayList<>();
-    }
-
-    public void adicionarProduto(Produto produto) {
-        if (produtos.size() >= MAX_PRODUTOS) {
-            System.out.println("A cesta está cheia. Não é possível adicionar mais produtos.");
-        } else {
-            produtos.add(produto);
-            System.out.println("Produto adicionado à cesta.");
-        }
-    }
-
-    public double calcularTotal() {
-        double total = 0.0;
-        for (Produto produto : produtos) {
-            total += produto.getPreco() * produto.getQuantidade();
-        }
-        return total;
-    }
-
-    public void listarCesta() {
-        if (produtos.isEmpty()) {
-            System.out.println("A cesta está vazia.");
-        } else {
-            System.out.println("Conteúdo da cesta:");
-            for (Produto produto : produtos) {
-                System.out.println("Tipo: " + produto.getClass().getSimpleName());
-                System.out.println("Preço unitário: R$" + produto.getPreco());
-                System.out.println("Quantidade: " + produto.getQuantidade());
-                System.out.println();
-            }
-            System.out.println("Valor total da cesta: R$" + calcularTotal());
-        }
-    }
-
-    public void limparCesta() {
-        produtos.clear();
-        System.out.println("A cesta foi limpa.");
-    }
-}
-*/
 class Cesta {
     private List<Produto> produtos; // Declaração de uma variável de instância do tipo List que armazenará os produtos da cesta
     private int quantidadeProdutos; // Declaração de uma variável de instância que controlará a quantidade de produtos na cesta
